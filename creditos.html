@@ -14,7 +14,7 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/landing_page.css">
+    <link rel="stylesheet" href="styles/creditos.css">
     <link rel="icon" href="resources/DUACyD_B-09.ico" type="image/x-icon">
 
 </head>
@@ -44,7 +44,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
                     <ul class="navbar-nav gap-lg-3">
                         <li class="nav-item">
-                            <a class="nav-link active px-3 py-2 rounded" href="index.html">
+                            <a class="nav-link px-3 py-2 rounded" href="index.html">
                                 <i class="bi bi-house-door me-2"></i>Inicio
                             </a>
                         </li>
@@ -75,189 +75,70 @@
     </header>
 
     <main>
-        <section class="hero-section text-white d-flex align-items-center"
-            style="background-image: url('resources/banner actualizado.jpg'); background-size: cover; background-position: center; height: 75vh;">
+        <section class="credits-section container-fluid py-5 d-flex align-items-center">
             <div class="container">
-                <div class="row align-items-center">
-                    <!-- Columna de texto -->
-                    <div class="col-lg-6 mb-4 mb-lg-0 ">
-                        <h1 class="display-4 fw-bold">D U A C Y D</h1>
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold title-gradient">Créditos del sitio web</h2>
+                    <p class="text-muted mb-4">Agradecemos la participación del equipo que hizo posible el desarrollo de
+                        esta plataforma.</p>
+                    <div class="divider mx-auto"></div>
+                </div>
 
-                        <h2 class="fw-semibold d-none d-lg-block">
-                            División de<br>
-                            Universidad<br>
-                            Abierta, Continua y<br>
-                            a Distancia
-                        </h2>
-                        <!-- Lema visible solo en pantallas grandes -->
-                        <p class="mt-3 fs-5 fst-italic d-none d-lg-block text-white-50">
-                            Facultad de Estudios Superiores Aragón<br>
-                            Educación flexible, sin límites ni distancias.
-                        </p>
-                    </div>
+                <div class="row g-4 justify-content-center">
 
-                    <!-- Columna del carrusel -->
-                    <div class="col-lg-6">
-                        <div id="carouselDUACYD" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-                            <div class="carousel-inner rounded shadow">
-                                <div class="carousel-item active">
-                                    <img src="resources/aviso-ejemplo1.jpeg" class="d-block w-100" alt="Slide 1">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="resources/aviso-ejemplo2.jpeg" class="d-block w-100" alt="Slide 2">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="resources/aviso-ejemplo3.jpeg" class="d-block w-100" alt="Slide 3">
-                                </div>
+                    <!-- Jefa/e de División -->
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="credit-card p-4 text-center h-100">
+                            <div class="icon-wrapper mb-3">
+                                <i class="bi bi-person-badge-fill"></i>
                             </div>
-                            <!-- Controles -->
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselDUACYD"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Anterior</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselDUACYD"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Siguiente</span>
-                            </button>
+                            <h5 class="fw-semibold mb-1">Jefa/e de División</h5>
+                            <p class="text-muted mb-0">[Nombre completo]</p>
+                            <div class="hover-line"></div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="container py-5 comp-2-section text-center">
-            <div class="row justify-content-center mb-4">
-                <div class="col-lg-10">
-                    <h2 class="comp-2-title fw-bold mb-3 custom-text-primary">
-                        ¡Impulsa tu desarrollo académico y profesional!
-                    </h2>
-                    <p class="comp-2-subtitle fs-5 mb-1">
-                        Descubre las oportunidades que la DUACyD FES Aragón tiene para ti a través de nuestras
-                        modalidades
-                        educativa, continua y lingüística.
-                    </p>
-                    <p class="comp-2-subtitle fs-5">
-                        Acércate a la jefatura de tu interés para conocer opciones flexibles, programas con respaldo
-                        institucional y alternativas que se adaptan a tu trayectoria.
-                    </p>
-                </div>
-            </div>
-
-            <div class="row text-start mt-5 gy-4">
-                <div class="col-md-4 d-flex flex-column align-items-center text-center">
-                    <div class="comp-2-img-container mb-3">
-                        <img src="resources/test img1.png" alt="Prestigio UNAM" class="img-fluid rounded comp-2-img">
+                    <!-- Coordinador del Proyecto -->
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="credit-card p-4 text-center h-100">
+                            <div class="icon-wrapper mb-3">
+                                <i class="bi bi-diagram-3-fill"></i>
+                            </div>
+                            <h5 class="fw-semibold mb-1">Coordinador del Proyecto</h5>
+                            <p class="text-muted mb-0">[Nombre completo]</p>
+                            <div class="hover-line"></div>
+                        </div>
                     </div>
-                    <h5 class="fw-bold custom-text-primary">Prestigio UNAM</h5>
-                    <p>Respaldado por una de las mejores universidades de Latinoamérica</p>
-                </div>
 
-                <div class="col-md-4 d-flex flex-column align-items-center text-center">
-                    <div class="comp-2-img-container mb-3">
-                        <img src="resources/test img2.png" alt="Certificación Oficial"
-                            class="img-fluid rounded comp-2-img">
+                    <!-- Diseñador Gráfico -->
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="credit-card p-4 text-center h-100">
+                            <div class="icon-wrapper mb-3">
+                                <i class="bi bi-palette-fill"></i>
+                            </div>
+                            <h5 class="fw-semibold mb-1">Diseñador Gráfico</h5>
+                            <p class="text-muted mb-0">[Nombre completo]</p>
+                            <div class="hover-line"></div>
+                        </div>
                     </div>
-                    <h5 class="fw-bold custom-text-primary">Certificación Oficial</h5>
-                    <p>Programas con validez curricular y reconocimiento institucional</p>
-                </div>
 
-                <div class="col-md-4 d-flex flex-column align-items-center text-center">
-                    <div class="comp-2-img-container mb-3">
-                        <img src="resources/test img3.png" alt="Satisfacción" class="img-fluid rounded comp-2-img">
+                    <!-- Desarrollador Web -->
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="credit-card p-4 text-center h-100">
+                            <div class="icon-wrapper mb-3">
+                                <i class="bi bi-code-slash"></i>
+                            </div>
+                            <h5 class="fw-semibold mb-1">Desarrollador Web</h5>
+                            <p class="text-muted mb-0">Ing. Carlos Meléndez Mejía</p>
+                            <div class="hover-line"></div>
+                        </div>
                     </div>
-                    <h5 class="fw-bold custom-text-primary">92% de Satisfacción</h5>
-                    <p>Alta valoración de egresados respecto a su formación y experiencia</p>
+
                 </div>
             </div>
         </section>
 
 
-        <section style="background-color: var(--tertiary-color); padding-top: 3rem; padding-bottom: 1rem;">
-            <div class="container">
-                <h2 class="text-center mb-4" style="color: var(--important-color); font-weight: 600;">Conoce las
-                    diversas
-                    jefaturas de
-                    la DUACyD</h2>
-                </h2>
-                <p class="text-center mb-4 text-white">Explora nuestras diversas jefaturas y descubre cómo podemos
-                    ayudarte
-                    a
-                    alcanzar tus metas educativas.</p>
-            </div>
-            <div class="comp-1-container">
-                <div class="comp-1-box" id="comp-1-box1">
-                    <img src="resources/SUAYED_Blanco-06.png"
-                        alt="Logo SUAyED - Sistema Universidad Abierta y Educación a Distancia" class="comp-1-logo-img">
-                    <div class="comp-1-texto">
-                        <h3 class="comp-1-titulo">Sistema Universidad Abierta y Educación a Distancia (SUAyED)</h3>
-                        <p class="comp-1-descripcion">El SUAyED de la FES Aragón ofrece programas académicos de
-                            licenciatura
-                            que combinan la flexibilidad del estudio independiente con el acompañamiento académico. Está
-                            diseñado para personas que requieren compatibilizar sus estudios con otras actividades,
-                            permitiendo avanzar en su formación profesional a través de modalidades semipresenciales y a
-                            distancia con el respaldo de la UNAM.</p>
-                    </div>
-                </div>
-
-                <div class="comp-1-box" id="comp-1-box2">
-                    <img src="resources/CLE_B-09.png" alt="Logo CLE - Centro de Lenguas Extranjeras"
-                        class="comp-1-logo-img">
-                    <div class="comp-1-texto">
-                        <h3 class="comp-1-titulo">Centro de Lenguas Extranjeras</h3>
-                        <p class="comp-1-descripcion">El Centro de Lenguas de la FES Aragón promueve el aprendizaje de
-                            idiomas como herramienta de desarrollo académico, profesional y cultural. Ofrece cursos en
-                            distintos niveles de inglés, francés, alemán, italiano, náhuatl y otros idiomas, impartidos
-                            por
-                            docentes especializados y con metodologías actualizadas que favorecen la competencia
-                            comunicativa.</p>
-                    </div>
-                </div>
-
-                <div class="comp-1-box" id="comp-1-box3">
-                    <img src="resources/Educación Continua_Blanco-07.png" alt="Logo Educación Continua - FES Aragón"
-                        class="comp-1-logo-img">
-                    <div class="comp-1-texto">
-                        <h3 class="comp-1-titulo">Educación Continua</h3>
-                        <p class="comp-1-descripcion">La Educación Continua en la FES Aragón brinda una oferta diversa
-                            de
-                            cursos, talleres y diplomados dirigidos a la comunidad universitaria y al público en
-                            general. Su
-                            objetivo es fomentar la actualización profesional, el desarrollo de habilidades y la
-                            formación
-                            permanente en distintas áreas del conocimiento, mediante programas de calidad con enfoque
-                            práctico e innovador.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="comp-4-hero d-flex align-items-center justify-content-center text-center"
-            style="background-image: url('resources/gente-fondo.png');">
-            <div class="comp-4-overlay"></div>
-
-            <div class="container position-relative text-white">
-                <div class="row justify-content-center">
-                    <div class="col-lg-10">
-                        <h2 class="fw-bold mb-3">Conoce al equipo detrás del DUACyD</h2>
-                        <p class="fs-5 mb-4">
-                            La División está conformada por personas comprometidas con la educación abierta, continua y
-                            a distancia.<br class="d-none d-md-inline">
-                            Descubre quiénes somos, qué hacemos y cómo trabajamos para acercar nuevas oportunidades a la
-                            comunidad.
-                        </p>
-                        <a href="acercade.html" class="btn custom-btn-color px-4 py-2 fw-semibold rounded-pill">
-                            Saber más sobre el equipo
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-        <!-- Botones flotantes -->
 
         <!-- Botones flotantes -->
         <div class="social-floating-buttons">

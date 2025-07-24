@@ -211,3 +211,25 @@
   transform: scale(1.05);
   transition: transform var(--transition-time);
 }
+
+.comp-4-hero {
+  position: relative;
+  min-height: 70vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.comp-4-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Oscurecimiento para contraste */
+  z-index: 1;
+}
+
+.comp-4-hero .container {
+  z-index: 2;
+  position: relative;
+}
+

@@ -321,3 +321,122 @@ main {
 .comp-3-image:hover {
   transform: scale(1.02);
 }
+.credits-section {
+  background-color: var(--secondary-color);
+  height: 60vh;
+  min-height: 600px; /* Altura mínima para evitar que se vea muy comprimido */
+}
+
+.title-gradient {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--quaternary-color) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.divider {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(0,41,107,0.1) 0%, var(--primary-color) 50%, rgba(133,190,255,0.1) 100%);
+}
+
+.credit-card {
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-time) ease;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  border: 1px solid var(--light-color);
+}
+
+.credit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 41, 107, 0.1);
+}
+
+.icon-wrapper {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(0,41,107,0.1) 0%, rgba(133,190,255,0.1) 100%);
+  border-radius: 50%;
+  transition: var(--transition-time);
+}
+
+.credit-card:hover .icon-wrapper {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--quaternary-color) 100%);
+}
+
+.credit-card:hover .icon-wrapper i {
+  color: var(--secondary-color);
+}
+
+.icon-wrapper i {
+  font-size: 1.75rem;
+  color: var(--primary-color);
+  transition: var(--transition-time);
+}
+
+.hover-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color) 0%, var(--quaternary-color) 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-time) ease;
+}
+
+.credit-card:hover .hover-line {
+  transform: scaleX(1);
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 1199.98px) {
+  .credits-section {
+    height: auto;
+    min-height: 60vh;
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .credits-section {
+    min-height: auto;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+  
+  .credit-card {
+    margin-bottom: 1rem;
+  }
+  
+  .icon-wrapper {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .icon-wrapper i {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .credits-section .row {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .title-gradient {
+    font-size: 1.75rem;
+  }
+}
