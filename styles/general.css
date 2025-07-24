@@ -1,0 +1,268 @@
+:root {
+    --primary-color: #00296b;
+    --subprimary-color: #003f88;
+    --secondary-color: #ffffff;
+    --tertiary-color: #003f88;
+    --quaternary-color: #85beff;
+    --important-color: #ffba31;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --suayed-color: #f94144;
+    --cle-color: #f9c74f;
+    --edco-color: #43aa8b;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --transition-time: 0.6s;
+    --border-radius: 12px;
+}
+
+
+* {
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Estilos generales */
+.custom-text-primary {
+    color: var(--primary-color);
+}
+
+.custom-text-important {
+    color: var(--important-color) !important;
+}
+
+.custom-btn-color {
+    background-color: var(--primary-color) !important;
+    color: var(--secondary-color) !important;
+}
+
+.custom-btn-color:hover {
+    background-color: var(--tertiary-color) !important;
+    color: var(--secondary-color) !important;
+}
+
+/* Navbar principal */
+.navbar {
+    padding: 10px 0;
+    background-color: var(--primary-color);
+    min-height: 80px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor de logos */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo {
+    height: auto;
+    max-height: 70px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* Elementos de navegación */
+.nav-link {
+    color: var(--secondary-color) !important;
+    font-size: 0.84rem;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--important-color) !important;
+    transform: translateY(-2px);
+}
+
+.nav-link:hover:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    width: 70%;
+    height: 2px;
+    background-color: var(--important-color);
+    transition: all 0.3s ease;
+}
+
+.nav-link.active {
+    background-color: var(--tertiary-color) !important;
+    color: var(--important-color) !important;
+    font-weight: 500;
+}
+
+/* Botón toggler */
+.navbar-toggler {
+    border: 2px solid var(--secondary-color);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+main {
+    margin-top: 7rem;
+}
+
+
+/* Estilos responsivos */
+@media (max-width: 991.98px) {
+    .logo {
+        max-height: 50px;
+    }
+    
+    .navbar {
+        min-height: 70px;
+    }
+    
+    .logo-container {
+        gap: 0.3rem;
+        margin-right: 0.5rem !important;
+    }
+    
+    .navbar-collapse {
+        background-color: var(--tertiary-color);
+        padding: 1rem;
+        margin-top: 1rem;
+        border-radius: var(--border-radius);
+        transition: all 0.4s ease-out;
+    }
+    
+    .nav-link {
+        padding: 0.5rem !important;
+        margin-bottom: 0.3rem;
+    }
+    
+    .nav-link:hover:after {
+        display: none; /* Ocultamos el subrayado en móvil */
+    }
+
+    main {
+        margin-top: 5rem;
+    }
+}
+.footer-carbon {
+    background-color: #333333;
+    /* Color carbón */
+    color: #ffffff;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #f8f9fa;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #adb5bd;
+}
+
+/* Estilos para los botones flotantes */
+.social-floating-buttons {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.social-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.social-btn:active {
+  transform: translateY(0) scale(0.95);
+}
+
+.whatsapp-btn {
+  background-color: #25D366;
+}
+
+.gmail-btn {
+  background-color: #D44638;
+}
+
+.social-btn i {
+  transition: transform 0.3s ease;
+}
+
+.social-btn:hover i {
+  transform: scale(1.1);
+}
+
+/* Efecto de onda al hacer clic */
+.social-btn:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform .5s, opacity 1s;
+}
+
+.social-btn:active:after {
+  transform: scale(0, 0);
+  opacity: .3;
+  transition: 0s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .social-floating-buttons {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .social-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
