@@ -191,16 +191,27 @@
 
         <!-- Botones flotantes -->
 
+        <!-- Botones flotantes -->
         <div class="social-floating-buttons">
-            <!-- Botón de WhatsApp -->
             <button type="button" class="social-btn whatsapp-btn" data-bs-toggle="modal"
                 data-bs-target="#whatsappModal">
                 <i class="bi bi-whatsapp"></i>
             </button>
 
-            <!-- Botón de Gmail -->
             <button type="button" class="social-btn gmail-btn" data-bs-toggle="modal" data-bs-target="#gmailModal">
                 <i class="bi bi-envelope"></i>
+            </button>
+
+            <button type="button" class="social-btn suayed-btn" data-bs-toggle="modal" data-bs-target="#modalSuayed">
+                <img src="resources/SUAYED_Blanco-06.ico" alt="SUAYED" class="icono-btn">
+            </button>
+
+            <button type="button" class="social-btn edco-btn" data-bs-toggle="modal" data-bs-target="#modalEdco">
+                <img src="resources\Educación-Continua_Blanco-07.ico" alt="EDCO" class="icono-btn">
+            </button>
+
+            <button type="button" class="social-btn cle-btn" data-bs-toggle="modal" data-bs-target="#modalCle">
+                <img src="resources/CLE_B-09.png" alt="CLE" class="icono-btn">
             </button>
         </div>
 
@@ -211,7 +222,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="whatsappModalLabel">Contactar por WhatsApp</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                     </div>
                     <div class="modal-body text-center">
                         <i class="bi bi-whatsapp display-1 text-success mb-3"></i>
@@ -229,19 +240,80 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="gmailModalLabel">Contactar por correo</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h5 class="modal-title" id="gmailModalLabel">Enviar correo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                     </div>
                     <div class="modal-body text-center">
                         <i class="bi bi-envelope display-1 text-danger mb-3"></i>
-                        <p>¿Deseas enviarnos un correo electrónico?</p>
-                        <a href="mailto:tucorreo@dominio.com" class="btn btn-danger w-100 py-2">
-                            <i class="bi bi-envelope me-2"></i> Abrir Gmail
+                        <p>¿Deseas escribirnos por correo electrónico?</p>
+                        <a href="mailto:tucorreo@ejemplo.com" class="btn btn-danger w-100 py-2">
+                            <i class="bi bi-envelope me-2"></i> Enviar correo
                         </a>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Modal SUAYED -->
+        <div class="modal fade" id="modalSuayed" tabindex="-1" aria-labelledby="modalSuayedLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content" style="border-color: var(--color-suayed);">
+                    <div class="modal-header" style="background-color: var(--color-suayed); color: white;">
+                        <h5 class="modal-title" id="modalSuayedLabel">Modalidad SUAyED</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <i class="bi bi-laptop display-1 mb-3" style="color: var(--color-suayed);"></i>
+                        <p>Consulta la información sobre la Universidad Abierta y a Distancia.</p>
+                        <a href="#" class="btn w-100 py-2" style="background-color: var(--color-suayed); color: white;">
+                            <i class="bi bi-box-arrow-up-right me-2"></i> Ir a SUAyED
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal EDCO -->
+        <div class="modal fade" id="modalEdco" tabindex="-1" aria-labelledby="modalEdcoLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content" style="border-color: var(--color-edco);">
+                    <div class="modal-header" style="background-color: var(--color-edco); color: white;">
+                        <h5 class="modal-title" id="modalEdcoLabel">Educación Continua</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <i class="bi bi-lightbulb display-1 mb-3" style="color: var(--color-edco);"></i>
+                        <p>Explora cursos, talleres y diplomados para tu actualización profesional.</p>
+                        <a href="#" class="btn w-100 py-2" style="background-color: var(--color-edco); color: white;">
+                            <i class="bi bi-box-arrow-up-right me-2"></i> Ver oferta EDCO
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal CLE -->
+        <div class="modal fade" id="modalCle" tabindex="-1" aria-labelledby="modalCleLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content" style="border-color: var(--color-cle);">
+                    <div class="modal-header" style="background-color: var(--color-cle); color: white;">
+                        <h5 class="modal-title" id="modalCleLabel">Centro de Lenguas Extranjeras (CLE)</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <i class="bi bi-translate display-1 mb-3" style="color: var(--color-cle);"></i>
+                        <p>Consulta la oferta de idiomas y modalidades del CLE.</p>
+                        <a href="#" class="btn w-100 py-2" style="background-color: var(--color-cle); color: white;">
+                            <i class="bi bi-box-arrow-up-right me-2"></i> Ir al CLE
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
 

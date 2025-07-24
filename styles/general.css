@@ -177,7 +177,6 @@ main {
     color: #adb5bd;
 }
 
-/* Estilos para los botones flotantes */
 .social-floating-buttons {
   position: fixed;
   bottom: 30px;
@@ -221,8 +220,24 @@ main {
   background-color: #D44638;
 }
 
-.social-btn i {
-  transition: transform 0.3s ease;
+.suayed-btn {
+  background-color: var(--suayed-color);
+}
+
+.edco-btn {
+  background-color: var(--edco-color);
+}
+
+.cle-btn {
+  background-color: var(--cle-color);
+}
+
+.icono-btn {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.2));
+  pointer-events: none;
 }
 
 .social-btn:hover i {
@@ -259,7 +274,7 @@ main {
     bottom: 20px;
     right: 20px;
   }
-  
+
   .social-btn {
     width: 50px;
     height: 50px;
