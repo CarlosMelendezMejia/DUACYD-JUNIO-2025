@@ -9,14 +9,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/landing_page.css">
+    <link rel="stylesheet" href="styles/ofertaeducativa.css">
     <link rel="icon" href="resources/DUACyD_B-09.ico" type="image/x-icon">
-
 </head>
 
 <body>
@@ -75,9 +76,281 @@
     </header>
 
     <main>
-        <section class="comp-3-hero d-flex align-items-center justify-content-center text-center"
+        <section class="hero-section comp-6-hero d-flex align-items-center"
+            style="background-image: url('resources/banner-oferta.jpg'); background-size: cover; background-position: center; height: 75vh;">
+            <div class="comp-6-overlay"></div>
+
+            <div class="container position-relative text-white">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h1 class="display-4 fw-bold">Oferta Educativa</h1>
+                        <h2 class="fw-semibold mt-3">
+                            Modalidades abiertas, continuas y lingüísticas<br>
+                            para impulsar tu formación
+                        </h2>
+                        <p class="mt-4 fs-5 fst-italic text-white-50 d-none d-lg-block">
+                            Explora las distintas opciones académicas que la DUACyD pone a tu alcance con respaldo
+                            institucional y enfoque flexible.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="comp-7-section text-white py-5" style="background-color: var(--suayed-color);">
+            <div class="container">
+                <div class="row align-items-center gy-4 mb-5">
+                    <div class="col-md-6">
+                        <div class="img-hover-zoom rounded shadow overflow-hidden">
+                            <img src="resources/test img1.png" alt="Modalidad SUAyED" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <span class="badge bg-white text-dark mb-2"><i class="bi bi-calendar2-week me-1"></i> Educación
+                            Flexible</span>
+                        <h3 class="fw-bold mb-3">Modalidad SUAyED</h3>
+                        <p class="fs-5">
+                            La modalidad SUAyED permite cursar estudios de licenciatura de forma flexible. Existen dos
+                            esquemas: abierto (clases presenciales los sábados) y a distancia (completamente en línea).
+                        </p>
+                        <div class="feature-list">
+                            <div class="d-flex mb-3">
+                                <i class="bi bi-people-fill fs-4 me-3"></i>
+                                <div>
+                                    <h5 class="fw-bold mb-1">Modalidad Abierta</h5>
+                                    <p class="mb-0">Sesiones sabatinas presenciales</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <i class="bi bi-laptop fs-4 me-3"></i>
+                                <div>
+                                    <h5 class="fw-bold mb-1">Modalidad a Distancia</h5>
+                                    <p class="mb-0">Clases 100% en línea</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#modalSuayed" class="btn btn-hover text-white fw-semibold mt-3"
+                            style="background-color: rgba(0,0,0,0.2);">
+                            Conocer más <i class="bi bi-chevron-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row text-dark g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0 card-hover">
+                            <img src="resources/test img1.png" class="card-img-top" alt="Modalidad Abierta">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="icon-circle bg-primary text-white me-3">
+                                        <i class="bi bi-people-fill"></i>
+                                    </div>
+                                    <h5 class="card-title fw-bold">Modalidad Abierta</h5>
+                                </div>
+                                <p class="card-text">Estudia con sesiones presenciales sabatinas y una estructura
+                                    semipresencial ideal para quienes trabajan.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0 card-hover">
+                            <img src="resources/card 3 suayed.png" class="card-img-top" alt="Educación a Distancia">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="icon-circle bg-success text-white me-3">
+                                        <i class="bi bi-globe2"></i>
+                                    </div>
+                                    <h5 class="card-title fw-bold">Educación a Distancia</h5>
+                                </div>
+                                <p class="card-text">Clases en línea, acceso a materiales digitales, flexibilidad total
+                                    para estudiar desde cualquier lugar.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0 card-hover">
+                            <img src="resources/card 2 suayed.png" class="card-img-top" alt="Acompañamiento Académico">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="icon-circle bg-info text-white me-3">
+                                        <i class="bi bi-person-lines-fill"></i>
+                                    </div>
+                                    <h5 class="card-title fw-bold">Acompañamiento Académico</h5>
+                                </div>
+                                <p class="card-text">Asesorías, tutores y plataformas de seguimiento para apoyar tu
+                                    avance académico.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Educación Continua - Actualizado -->
+        <section class="comp-8-section text-white py-5" style="background-color: var(--edco-color);">
+            <div class="container">
+                <div class="row align-items-center flex-md-row-reverse gy-4 mb-5">
+                    <div class="col-md-6">
+                        <div class="img-hover-zoom rounded shadow overflow-hidden">
+                            <img src="resources/edco.jpg" alt="Educación Continua" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <span class="badge bg-white text-dark mb-2"><i class="bi bi-arrow-repeat me-1"></i> Aprendizaje
+                            Permanente</span>
+                        <h3 class="fw-bold mb-3">Educación Continua</h3>
+                        <p class="fs-5">
+                            Ofrecemos programas de actualización en diversos campos del conocimiento, abiertos al
+                            público general. Nuestros cursos, talleres y diplomados promueven el aprendizaje permanente.
+                        </p>
+                        <a href="#modalEdco" class="btn btn-hover text-white fw-semibold mt-3"
+                            style="background-color: rgba(0,0,0,0.2);">
+                            Conocer más <i class="bi bi-chevron-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="row text-dark g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0 card-hover">
+                            <img src="resources/edco-card1.jpg" class="card-img-top" alt="Diplomados">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="icon-circle bg-primary text-white me-3">
+                                        <i class="bi bi-award-fill"></i>
+                                    </div>
+                                    <h5 class="card-title fw-bold">Diplomados</h5>
+                                </div>
+                                <p class="card-text">Programas de formación estructurada con valor curricular para
+                                    docentes y profesionistas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0 card-hover">
+                            <img src="resources/edco-card2.jpg" class="card-img-top" alt="Cursos y Talleres">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="icon-circle bg-success text-white me-3">
+                                        <i class="bi bi-easel-fill"></i>
+                                    </div>
+                                    <h5 class="card-title fw-bold">Cursos y Talleres</h5>
+                                </div>
+                                <p class="card-text">Ofertas accesibles, breves y prácticas en temas pedagógicos,
+                                    disciplinares y personales.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0 card-hover">
+                            <img src="resources/edco-card3.jpg" class="card-img-top" alt="Público general">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="icon-circle bg-info text-white me-3">
+                                        <i class="bi bi-door-open-fill"></i>
+                                    </div>
+                                    <h5 class="card-title fw-bold">Público Abierto</h5>
+                                </div>
+                                <p class="card-text">No necesitas ser parte de la UNAM para participar. Nuestros
+                                    programas son para todas y todos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CLE - Versión Final -->
+        <section class="comp-9-section text-white py-5" style="background-color: var(--cle-color);">
+            <div class="container">
+                <div class="row align-items-center gy-4 mb-5">
+                    <div class="col-md-6">
+                        <div class="img-hover-zoom rounded shadow overflow-hidden">
+                            <img src="resources/cle.jpg" alt="Centro de Lenguas Extranjeras" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <span class="badge bg-white text-dark mb-2"><i class="bi bi-translate me-1"></i>
+                            Multilingüismo</span>
+                        <h3 class="fw-bold mb-3">Centro de Lenguas Extranjeras (CLE)</h3>
+                        <p class="fs-5">
+                            Aprende idiomas de manera efectiva, con cursos que combinan comprensión, producción y
+                            práctica comunicativa. El CLE forma parte esencial del desarrollo integral en la FES Aragón.
+                        </p>
+                        <div class="mb-4">
+                            <h6 class="fw-bold">Idiomas disponibles:</h6>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-white text-dark"><i class="bi bi-check-circle me-1"></i>
+                                    Inglés</span>
+                                <span class="badge bg-white text-dark"><i class="bi bi-check-circle me-1"></i>
+                                    Francés</span>
+                                <span class="badge bg-white text-dark"><i class="bi bi-check-circle me-1"></i>
+                                    Alemán</span>
+                                <span class="badge bg-white text-dark"><i class="bi bi-check-circle me-1"></i>
+                                    Italiano</span>
+                                <span class="badge bg-white text-dark"><i class="bi bi-check-circle me-1"></i>
+                                    Náhuatl</span>
+                            </div>
+                        </div>
+                        <a href="#modalCle" class="btn btn-hover text-white fw-semibold mt-3"
+                            style="background-color: rgba(0,0,0,0.2);">
+                            Conocer más <i class="bi bi-chevron-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row text-dark g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0 card-hover">
+                            <img src="resources/cle-card1.jpg" class="card-img-top" alt="Idiomas ofrecidos">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="icon-circle bg-primary text-white me-3">
+                                        <i class="bi bi-translate"></i>
+                                    </div>
+                                    <h5 class="card-title fw-bold">Idiomas Ofrecidos</h5>
+                                </div>
+                                <p class="card-text">Inglés, francés, alemán, italiano, náhuatl y más, con diversos
+                                    niveles y objetivos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0 card-hover">
+                            <img src="resources/cle-card2.jpg" class="card-img-top" alt="Modalidades y niveles">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="icon-circle bg-success text-white me-3">
+                                        <i class="bi bi-calendar-week"></i>
+                                    </div>
+                                    <h5 class="card-title fw-bold">Modalidades y Niveles</h5>
+                                </div>
+                                <p class="card-text">Cursos generales, académicos, sabatinos y vespertinos desde nivel
+                                    básico hasta avanzado.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm border-0 card-hover">
+                            <img src="resources/cle-card3.jpg" class="card-img-top" alt="Certificaciones">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="icon-circle bg-info text-white me-3">
+                                        <i class="bi bi-award"></i>
+                                    </div>
+                                    <h5 class="card-title fw-bold">Certificaciones</h5>
+                                </div>
+                                <p class="card-text">Constancias oficiales y preparación para exámenes reconocidos
+                                    dentro y fuera de la UNAM.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- <section class="comp-3-hero d-flex align-items-center justify-content-center text-center"
             style="background-image: url('resources/ilustración en desarrollo.png');">
-            <div class="comp-3-overlay"></div> <!-- Capa oscura -->
+            <div class="comp-3-overlay"></div>  Capa oscura 
 
             <div class="container position-relative text-white">
                 <div class="row align-items-center justify-content-center">
@@ -92,7 +365,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Botones flotantes -->
         <div class="social-floating-buttons">
@@ -117,7 +390,6 @@
                 <img src="resources/CLE_B-09.png" alt="CLE" class="icono-btn">
             </button>
         </div>
-
         <!-- Modal WhatsApp -->
         <div class="modal fade" id="whatsappModal" tabindex="-1" aria-labelledby="whatsappModalLabel"
             aria-hidden="true">
@@ -137,7 +409,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Modal Gmail -->
         <div class="modal fade" id="gmailModal" tabindex="-1" aria-labelledby="gmailModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
@@ -156,7 +427,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Modal SUAYED -->
         <div class="modal fade" id="modalSuayed" tabindex="-1" aria-labelledby="modalSuayedLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
@@ -176,7 +446,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Modal EDCO -->
         <div class="modal fade" id="modalEdco" tabindex="-1" aria-labelledby="modalEdcoLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
@@ -196,7 +465,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Modal CLE -->
         <div class="modal fade" id="modalCle" tabindex="-1" aria-labelledby="modalCleLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
@@ -216,10 +484,7 @@
                 </div>
             </div>
         </div>
-
     </main>
-
-
     <footer class="footer-carbon py-5">
         <div class="container">
             <div class="row">
@@ -261,7 +526,9 @@
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <ul class="list-inline mb-0">
-                        <li class="list-inline-item"><a href="https://www.aragon.unam.mx/fes-aragon/public_html/documents/aviso-de-privacidad/integral-de-la-fes-aragon.pdf" class="footer-links">Aviso de Privacidad</a></li>
+                        <li class="list-inline-item"><a
+                                href="https://www.aragon.unam.mx/fes-aragon/public_html/documents/aviso-de-privacidad/integral-de-la-fes-aragon.pdf"
+                                class="footer-links">Aviso de Privacidad</a></li>
                         <li class="list-inline-item"><span class="mx-2">|</span></li>
                         <li class="list-inline-item"><a href="#" class="footer-links">Términos de Uso</a></li>
                         <li class="list-inline-item"><span class="mx-2">|</span></li>
@@ -273,7 +540,14 @@
     </footer>
 
     <!-- Contenido principal -->
-
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
     <script>
         // JavaScript con selectores actualizados
         document.addEventListener('DOMContentLoaded', function () {

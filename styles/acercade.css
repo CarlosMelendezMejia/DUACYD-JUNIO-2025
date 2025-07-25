@@ -322,25 +322,3 @@ main {
   transform: scale(1.02);
 }
 
-.comp-6-hero {
-  position: relative;
-  min-height: 75vh;
-  background-color: var(--primary-color);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-}
-
-.comp-6-overlay {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.4); /* Oscurecimiento */
-  z-index: 1;
-}
-
-.comp-6-hero .container {
-  position: relative;
-  z-index: 2;
-}
