@@ -75,6 +75,10 @@
     </header>
 
     <main>
+
+
+
+
         <section class="hero-section comp-6-hero d-flex align-items-center"
             style="background-image: url('resources/banner-faq.jpg'); background-size: cover; background-position: center; height: 75vh;">
             <div class="comp-6-overlay"></div>
@@ -95,20 +99,110 @@
             </div>
         </section>
 
-        <section class="comp-3-hero d-flex align-items-center justify-content-center text-center"
-            style="background-image: url('resources/ilustración en desarrollo.png');">
-            <div class="comp-3-overlay"></div> <!-- Capa oscura -->
+        <!-- Sección Preguntas Frecuentes -->
+        <section class="container my-5">
 
-            <div class="container position-relative text-white">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-md-6 mb-4 mb-md-0 text-md-start text-center">
-                        <h2 class="fw-bold mb-3">Esta sección está en desarrollo</h2>
-                        <p class="fs-5">
-                            Estamos trabajando para ofrecerte una experiencia completa e informativa.<br
-                                class="d-none d-md-inline">
-                            Muy pronto podrás consultar todos los detalles y recursos disponibles.
-                        </p>
-                        <p class="text-light">Gracias por tu comprensión.</p>
+            <div class="accordion" id="faqAccordion">
+                <!-- Sección: General -->
+                <div class="accordion-item mb-3 border-0 rounded-3 overflow-hidden">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fs-5 py-3" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                            <i class="bi bi-question-circle me-2 text-primary"></i> ¿Qué es la DUACyD?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body bg-light">
+                            La División de Universidad Abierta, Continua y a Distancia (DUACyD) es la instancia
+                            encargada de coordinar programas educativos flexibles, incluyentes y de alta calidad en
+                            modalidades distintas a la escolarizada.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección: Modalidad Abierta -->
+                <div class="accordion-item mb-3 border-0 rounded-3 overflow-hidden">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fs-5 py-3" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                            <i class="bi bi-journal-text me-2 text-primary"></i> ¿En qué consiste la modalidad SUAyED?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body bg-light">
+                            Es una modalidad educativa de la UNAM que permite estudiar una licenciatura con horarios
+                            flexibles, a través de materiales didácticos y el acompañamiento de asesores, ya sea en
+                            modalidad abierta o a distancia.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección: Educación Continua -->
+                <div class="accordion-item mb-3 border-0 rounded-3 overflow-hidden">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fs-5 py-3" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                            <i class="bi bi-mortarboard me-2 text-primary"></i> ¿Qué tipo de cursos ofrece Educación
+                            Continua?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body bg-light">
+                            Ofrecemos cursos, talleres, microcursos y diplomados en diversas áreas del conocimiento,
+                            enfocados en la actualización profesional y el desarrollo de nuevas habilidades.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección: CLE -->
+                <div class="accordion-item mb-3 border-0 rounded-3 overflow-hidden">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fs-5 py-3" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                            <i class="bi bi-translate me-2 text-primary"></i> ¿Qué idiomas puedo aprender en el Centro
+                            de Lenguas?
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body bg-light">
+                            Actualmente se imparten cursos de inglés, francés, alemán e italiano. Cada uno cuenta con
+                            diferentes niveles y modalidades (presencial o en línea).
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección: Inscripción -->
+                <div class="accordion-item mb-3 border-0 rounded-3 overflow-hidden">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fs-5 py-3" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                            <i class="bi bi-pencil-square me-2 text-primary"></i> ¿Cómo me inscribo a un curso o
+                            diplomado?
+                        </button>
+                    </h2>
+                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body bg-light">
+                            Cada convocatoria incluye una liga de registro. También puedes consultar nuestra
+                            <strong>página oficial</strong> o redes sociales para conocer los periodos de inscripción
+                            vigentes.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección: Constancias -->
+                <div class="accordion-item mb-3 border-0 rounded-3 overflow-hidden">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fs-5 py-3" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+                            <i class="bi bi-file-earmark-text me-2 text-primary"></i> ¿Se entregan constancias o
+                            diplomas?
+                        </button>
+                    </h2>
+                    <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body bg-light">
+                            Sí. Al finalizar los cursos o diplomados, y cumpliendo con los requisitos de asistencia y
+                            evaluación, se entrega una constancia oficial avalada por la UNAM.
+                        </div>
                     </div>
                 </div>
             </div>
