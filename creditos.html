@@ -74,20 +74,20 @@
     </header>
 
     <main>
-        <section class="credits-section container-fluid py-5 d-flex align-items-center">
+        <section class="cr-credits-section container-fluid py-5 d-flex align-items-center">
             <div class="container">
                 <div class="text-center mb-5">
                     <h2 class="fw-bold title-gradient">Créditos del sitio web</h2>
                     <p class="text-muted mb-4">Agradecemos la participación del equipo que hizo posible el desarrollo de
                         esta plataforma.</p>
-                    <div class="divider mx-auto"></div>
+                    <div class="cr-divider mx-auto"></div>
                 </div>
 
                 <div class="row g-4 justify-content-center">
 
                     <!-- Jefa/e de División -->
                     <div class="col-sm-6 col-lg-3">
-                        <div class="credit-card p-4 text-center h-100">
+                        <div class="cr-credit-card p-4 text-center h-100">
                             <div class="icon-wrapper mb-3">
                                 <i class="bi bi-person-badge-fill"></i>
                             </div>
@@ -99,7 +99,7 @@
 
                     <!-- Coordinador del Proyecto -->
                     <div class="col-sm-6 col-lg-3">
-                        <div class="credit-card p-4 text-center h-100">
+                        <div class="cr-credit-card p-4 text-center h-100">
                             <div class="icon-wrapper mb-3">
                                 <i class="bi bi-diagram-3-fill"></i>
                             </div>
@@ -111,7 +111,7 @@
 
                     <!-- Diseñador Gráfico -->
                     <div class="col-sm-6 col-lg-3">
-                        <div class="credit-card p-4 text-center h-100">
+                        <div class="cr-credit-card p-4 text-center h-100">
                             <div class="icon-wrapper mb-3">
                                 <i class="bi bi-palette-fill"></i>
                             </div>
@@ -123,7 +123,7 @@
 
                     <!-- Desarrollador Web -->
                     <div class="col-sm-6 col-lg-3">
-                        <div class="credit-card p-4 text-center h-100">
+                        <div class="cr-credit-card p-4 text-center h-100">
                             <div class="icon-wrapper mb-3">
                                 <i class="bi bi-code-slash"></i>
                             </div>
@@ -324,10 +324,10 @@
     <script>
         // JavaScript con selectores actualizados
         document.addEventListener('DOMContentLoaded', function () {
-            const container = document.querySelector('.comp-1-container');
+            const container = document.querySelector('.lp-comp-1-container');
             if (!container) return;
 
-            const boxes = container.querySelectorAll('.comp-1-box');
+            const boxes = container.querySelectorAll('.lp-comp-1-box');
 
             // Verificar si es un dispositivo táctil
             const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints;
@@ -339,20 +339,20 @@
 
                         // Cerrar cualquier caja abierta primero
                         boxes.forEach(b => {
-                            if (b !== box && b.classList.contains('comp-1-active')) {
-                                b.classList.remove('comp-1-active');
+                            if (b !== box && b.classList.contains('lp-comp-1-active')) {
+                                b.classList.remove('lp-comp-1-active');
                             }
                         });
 
                         // Alternar la clase active en la caja clickeada
-                        box.classList.toggle('comp-1-active');
+                        box.classList.toggle('lp-comp-1-active');
                     });
                 });
 
                 // Cerrar al hacer click fuera de las cajas
                 document.addEventListener('click', function () {
                     boxes.forEach(box => {
-                        box.classList.remove('comp-1-active');
+                        box.classList.remove('lp-comp-1-active');
                     });
                 });
             }
