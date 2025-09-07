@@ -276,10 +276,10 @@
     <script>
         // JavaScript con selectores actualizados
         document.addEventListener('DOMContentLoaded', function () {
-            const container = document.querySelector('.comp-1-container');
+            const container = document.querySelector('.lp-comp-1-container');
             if (!container) return;
 
-            const boxes = container.querySelectorAll('.comp-1-box');
+            const boxes = container.querySelectorAll('.lp-comp-1-box');
 
             // Verificar si es un dispositivo táctil
             const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints;
@@ -291,20 +291,20 @@
 
                         // Cerrar cualquier caja abierta primero
                         boxes.forEach(b => {
-                            if (b !== box && b.classList.contains('comp-1-active')) {
-                                b.classList.remove('comp-1-active');
+                            if (b !== box && b.classList.contains('lp-comp-1-active')) {
+                                b.classList.remove('lp-comp-1-active');
                             }
                         });
 
                         // Alternar la clase active en la caja clickeada
-                        box.classList.toggle('comp-1-active');
+                        box.classList.toggle('lp-comp-1-active');
                     });
                 });
 
                 // Cerrar al hacer click fuera de las cajas
                 document.addEventListener('click', function () {
                     boxes.forEach(box => {
-                        box.classList.remove('comp-1-active');
+                        box.classList.remove('lp-comp-1-active');
                     });
                 });
             }
