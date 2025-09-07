@@ -731,6 +731,18 @@ main {
     transition-delay: 0.2s;
 }
 
+/* Ocultar logos de las otras cajas cuando una está en hover (desktop) */
+.lp-comp-1-container:hover .lp-comp-1-box:not(:hover) .lp-comp-1-logo-img {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+/* Ocultar logos de las otras cajas cuando una está activa (touch) */
+.lp-comp-1-container.has-active .lp-comp-1-box:not(.lp-comp-1-active) .lp-comp-1-logo-img {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
 /* Media queries con prefijo */
 @media (min-width: 768px) {
     .lp-comp-1-container {

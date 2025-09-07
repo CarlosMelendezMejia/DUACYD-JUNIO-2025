@@ -465,6 +465,14 @@
 
                         // Alternar la clase active en la caja clickeada
                         box.classList.toggle('lp-comp-1-active');
+
+                        // Añadir o quitar clase contenedora para estilos globales
+                        const anyActive = Array.from(boxes).some(b => b.classList.contains('lp-comp-1-active'));
+                        if (anyActive) {
+                            container.classList.add('has-active');
+                        } else {
+                            container.classList.remove('has-active');
+                        }
                     });
                 });
 
@@ -473,6 +481,7 @@
                     boxes.forEach(box => {
                         box.classList.remove('lp-comp-1-active');
                     });
+                    container.classList.remove('has-active');
                 });
             }
         });
