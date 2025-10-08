@@ -792,9 +792,12 @@ main {
   background-color: #002147; /* Fallback */
 }
 
+.carousel-inner {
+  overflow: hidden;
+}
+
 .carousel-inner img {
-  object-fit: cover;
-  aspect-ratio: 4/1;
+  display: block;
   width: 100%;
   height: auto;
 }
@@ -1168,3 +1171,4 @@ main {
 .comp-3-image:hover {
   transform: scale(1.02);
 }
+
