@@ -17,6 +17,7 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/flip-cards.css">
     <link rel="icon" href="resources/DUACyD_B-09.ico" type="image/x-icon">
 
 </head>
@@ -99,24 +100,282 @@
         </section>
         <section class="comp-3-section py-5">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 mb-4 mb-lg-0">
-                        <h2 class="comp-3-title mb-4">Nuestra Misión</h2>
-                        <p class="comp-3-text">
-                            El objetivo central del DUACYD en la UNAM, y específicamente en FES Aragón, es extender los
-                            recursos didácticos mediante el uso de Tecnologías de la Información y la Comunicación
-                            (TIC), ofreciendo educación superior y continua en modalidades abiertas y a distancia para
-                            formar profesionistas del más alto nivel, que respondan a las necesidades sociales y
-                            laborales actuales.
-                        </p>
-                    </div>
+                <h2 class="text-center mb-5 fw-bold custom-text-primary" style="font-size: 2.5rem;">Nuestra Esencia</h2>
+                <div class="row g-4">
+                    <!-- Flip Card Misión -->
                     <div class="col-lg-6">
-                        <h2 class="comp-3-title mb-4">Nuestra Visión</h2>
-                        <p class="comp-3-text">
-                            Ser un referente nacional en la educación abierta, continua y a distancia, reconocido por
-                            su excelencia académica, innovación pedagógica y compromiso social, contribuyendo al
-                            desarrollo integral de los estudiantes y al fortalecimiento de la comunidad universitaria.
-                        </p>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="flip-card-icon">
+                                        <i class="bi bi-bullseye"></i>
+                                    </div>
+                                    <h3 class="flip-card-title">Nuestra Misión</h3>
+                                    <p class="flip-card-hint">Pasa el cursor para leer más</p>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3 class="mb-3">Nuestra Misión</h3>
+                                    <p>
+                                        El objetivo central del DUACYD en la UNAM, y específicamente en FES Aragón, es
+                                        extender los
+                                        recursos didácticos mediante el uso de Tecnologías de la Información y la
+                                        Comunicación
+                                        (TIC), ofreciendo educación superior y continua en modalidades abiertas y a
+                                        distancia para
+                                        formar profesionistas del más alto nivel, que respondan a las necesidades
+                                        sociales y
+                                        laborales actuales.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Flip Card Visión -->
+                    <div class="col-lg-6">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="flip-card-icon">
+                                        <i class="bi bi-eye"></i>
+                                    </div>
+                                    <h3 class="flip-card-title">Nuestra Visión</h3>
+                                    <p class="flip-card-hint">Pasa el cursor para leer más</p>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3 class="mb-3">Nuestra Visión</h3>
+                                    <p>
+                                        Ser un referente nacional en la educación abierta, continua y a distancia,
+                                        reconocido por
+                                        su excelencia académica, innovación pedagógica y compromiso social,
+                                        contribuyendo al
+                                        desarrollo integral de los estudiantes y al fortalecimiento de la comunidad
+                                        universitaria.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="organigrama-section">
+            <div class="container">
+                <h2 class="organigrama-title">Organigrama DUACYD</h2>
+
+                <!-- Tabs Navigation -->
+                <div class="org-tabs-nav">
+                    <button class="org-tab active" data-tab="direccion">
+                        Dirección
+                    </button>
+                    <button class="org-tab" data-tab="coordinacion-arte">
+                        Coordinación de Arte y Cultura
+                    </button>
+                    <button class="org-tab" data-tab="coordinacion-deporte">
+                        Coordinación de Deporte
+                    </button>
+                    <button class="org-tab" data-tab="servicios">
+                        Servicios Administrativos
+                    </button>
+                </div>
+
+                <!-- Tab Content: Dirección -->
+                <div class="org-content active" id="direccion">
+                    <div class="hierarchy-container">
+                        <div class="person-card level-1">
+                            <img src="https://via.placeholder.com/120" alt="Director" class="person-photo">
+                            <div class="person-info">
+                                <div class="person-position">Director de la DUACYD</div>
+                                <div class="person-name">Dr. Juan Carlos Pérez González</div>
+                                <div class="person-contact">
+                                    <div class="contact-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <a href="mailto:juan.perez@duacyd.edu.mx">juan.perez@duacyd.edu.mx</a>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>(984) 877 4600 ext. 2000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="person-card level-2">
+                            <img src="https://via.placeholder.com/120" alt="Asistente" class="person-photo">
+                            <div class="person-info">
+                                <div class="person-position">Asistente de Dirección</div>
+                                <div class="person-name">Lic. María Fernanda López Ruiz</div>
+                                <div class="person-contact">
+                                    <div class="contact-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <a href="mailto:maria.lopez@duacyd.edu.mx">maria.lopez@duacyd.edu.mx</a>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>(984) 877 4600 ext. 2001</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Content: Coordinación de Arte y Cultura -->
+                <div class="org-content" id="coordinacion-arte">
+                    <div class="hierarchy-container">
+                        <div class="person-card level-1">
+                            <img src="https://via.placeholder.com/120" alt="Coordinador" class="person-photo">
+                            <div class="person-info">
+                                <div class="person-position">Coordinador de Arte y Cultura</div>
+                                <div class="person-name">Mtro. Roberto Sánchez Martínez</div>
+                                <div class="person-contact">
+                                    <div class="contact-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <a href="mailto:roberto.sanchez@duacyd.edu.mx">roberto.sanchez@duacyd.edu.mx</a>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>(984) 877 4600 ext. 2100</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="person-card level-2">
+                            <img src="https://via.placeholder.com/120" alt="Responsable" class="person-photo">
+                            <div class="person-info">
+                                <div class="person-position">Responsable de Talleres Artísticos</div>
+                                <div class="person-name">Lic. Ana Gabriela Torres Vega</div>
+                                <div class="person-contact">
+                                    <div class="contact-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <a href="mailto:ana.torres@duacyd.edu.mx">ana.torres@duacyd.edu.mx</a>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>(984) 877 4600 ext. 2101</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="person-card level-2">
+                            <img src="https://via.placeholder.com/120" alt="Responsable" class="person-photo">
+                            <div class="person-info">
+                                <div class="person-position">Responsable de Eventos Culturales</div>
+                                <div class="person-name">Lic. Carlos Eduardo Ramírez Ortiz</div>
+                                <div class="person-contact">
+                                    <div class="contact-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <a href="mailto:carlos.ramirez@duacyd.edu.mx">carlos.ramirez@duacyd.edu.mx</a>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>(984) 877 4600 ext. 2102</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Content: Coordinación de Deporte -->
+                <div class="org-content" id="coordinacion-deporte">
+                    <div class="hierarchy-container">
+                        <div class="person-card level-1">
+                            <img src="https://via.placeholder.com/120" alt="Coordinador" class="person-photo">
+                            <div class="person-info">
+                                <div class="person-position">Coordinador de Deporte</div>
+                                <div class="person-name">Mtro. Luis Fernando Hernández Castro</div>
+                                <div class="person-contact">
+                                    <div class="contact-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <a href="mailto:luis.hernandez@duacyd.edu.mx">luis.hernandez@duacyd.edu.mx</a>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>(984) 877 4600 ext. 2200</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="person-card level-2">
+                            <img src="https://via.placeholder.com/120" alt="Responsable" class="person-photo">
+                            <div class="person-info">
+                                <div class="person-position">Responsable de Actividades Deportivas</div>
+                                <div class="person-name">Lic. Patricia Montes Rodríguez</div>
+                                <div class="person-contact">
+                                    <div class="contact-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <a href="mailto:patricia.montes@duacyd.edu.mx">patricia.montes@duacyd.edu.mx</a>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>(984) 877 4600 ext. 2201</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="person-card level-2">
+                            <img src="https://via.placeholder.com/120" alt="Responsable" class="person-photo">
+                            <div class="person-info">
+                                <div class="person-position">Responsable de Instalaciones Deportivas</div>
+                                <div class="person-name">Ing. Miguel Ángel Gómez Silva</div>
+                                <div class="person-contact">
+                                    <div class="contact-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <a href="mailto:miguel.gomez@duacyd.edu.mx">miguel.gomez@duacyd.edu.mx</a>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>(984) 877 4600 ext. 2202</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Content: Servicios Administrativos -->
+                <div class="org-content" id="servicios">
+                    <div class="hierarchy-container">
+                        <div class="person-card level-1">
+                            <img src="https://via.placeholder.com/120" alt="Responsable" class="person-photo">
+                            <div class="person-info">
+                                <div class="person-position">Responsable de Servicios Administrativos</div>
+                                <div class="person-name">Lic. Sandra Ivette Morales Díaz</div>
+                                <div class="person-contact">
+                                    <div class="contact-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <a href="mailto:sandra.morales@duacyd.edu.mx">sandra.morales@duacyd.edu.mx</a>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>(984) 877 4600 ext. 2300</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="person-card level-2">
+                            <img src="https://via.placeholder.com/120" alt="Auxiliar" class="person-photo">
+                            <div class="person-info">
+                                <div class="person-position">Auxiliar Administrativo</div>
+                                <div class="person-name">Lic. Jorge Alberto Medina Cruz</div>
+                                <div class="person-contact">
+                                    <div class="contact-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <a href="mailto:jorge.medina@duacyd.edu.mx">jorge.medina@duacyd.edu.mx</a>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>(984) 877 4600 ext. 2301</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -444,6 +703,53 @@
                     content.style.boxShadow = '0 10px 30px var(--shadow-color)';
                 });
             });
+        });
+    </script>
+    <script>
+        // Tab functionality
+        const tabs = document.querySelectorAll('.org-tab');
+        const contents = document.querySelectorAll('.org-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs and contents
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+
+                // Add active class to clicked tab
+                tab.classList.add('active');
+
+                // Show corresponding content
+                const tabId = tab.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Scroll animation for person cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '0';
+                    entry.target.style.transform = 'translateY(20px)';
+
+                    setTimeout(() => {
+                        entry.target.style.transition = 'all 0.6s ease';
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, 100);
+
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.person-card').forEach(card => {
+            observer.observe(card);
         });
     </script>
     <!-- Bootstrap JS -->
