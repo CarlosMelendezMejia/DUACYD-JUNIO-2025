@@ -1190,275 +1190,380 @@ main {
 }
 
 .organigrama-section {
-  padding: 80px 0;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  min-height: 100vh;
-}
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
 
-.organigrama-title {
-  text-align: center;
-  color: var(--primary-color);
-  margin-bottom: 60px;
-  font-size: 2.8rem;
-  font-weight: 700;
-  position: relative;
-}
+        .organigrama-title {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 60px;
+            font-size: 2.8rem;
+            font-weight: 700;
+            position: relative;
+        }
 
-.organigrama-title::after {
-  content: '';
-  display: block;
-  width: 100px;
-  height: 5px;
-  background: linear-gradient(90deg, var(--primary-color), var(--subprimary-color));
-  margin: 20px auto 0;
-  border-radius: 3px;
-}
+        .organigrama-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-color), var(--subprimary-color));
+            margin: 20px auto 0;
+            border-radius: 3px;
+        }
 
-/* Tabs Navigation */
-.org-tabs-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0;
-  margin-bottom: 40px;
-  background: white;
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  box-shadow: 0 4px 12px var(--shadow-color);
-}
+        /* Tabs Navigation */
+        .org-tabs-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0;
+            margin-bottom: 40px;
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 12px var(--shadow-color);
+        }
 
-.org-tab {
-  flex: 1;
-  min-width: 180px;
-  padding: 20px 15px;
-  text-align: center;
-  background: white;
-  color: #666;
-  border: none;
-  cursor: pointer;
-  transition: all var(--transition-time);
-  font-weight: 500;
-  font-size: 0.95rem;
-  position: relative;
-  border-bottom: 3px solid transparent;
-}
+        .org-tab {
+            flex: 1;
+            min-width: 180px;
+            padding: 20px 15px;
+            text-align: center;
+            background: white;
+            color: #666;
+            border: none;
+            cursor: pointer;
+            transition: all var(--transition-time);
+            font-weight: 500;
+            font-size: 0.95rem;
+            position: relative;
+            border-bottom: 3px solid transparent;
+        }
 
-.org-tab:hover {
-  background: #f8f9fa;
-  color: var(--primary-color);
-}
+        .org-tab:hover {
+            background: #f8f9fa;
+            color: var(--primary-color);
+        }
 
-.org-tab.active {
-  background: var(--primary-color);
-  color: white;
-  border-bottom-color: var(--important-color);
-  font-weight: 600;
-}
+        .org-tab.active {
+            background: var(--primary-color);
+            color: white;
+            border-bottom-color: var(--important-color);
+            font-weight: 600;
+        }
 
-/* Content Container */
-.org-content {
-  display: none;
-  animation: fadeIn 0.5s ease-in;
-}
+        /* Colores específicos por tab */
+        .org-tab[data-tab="duacyd"].active {
+            background: var(--primary-color);
+            border-bottom-color: var(--important-color);
+        }
 
-.org-content.active {
-  display: block;
-}
+        .org-tab[data-tab="suayed"].active {
+            background: var(--suayed-color);
+            border-bottom-color: #c23135;
+        }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
+        .org-tab[data-tab="cle"].active {
+            background: var(--cle-color);
+            border-bottom-color: #f4a520;
+        }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+        .org-tab[data-tab="edco"].active {
+            background: var(--edco-color);
+            border-bottom-color: #358872;
+        }
 
-/* Hierarchy Container */
-.hierarchy-container {
-  background: white;
-  border-radius: var(--border-radius);
-  padding: 40px;
-  box-shadow: 0 8px 24px var(--shadow-color);
-}
+        /* Content Container */
+        .org-content {
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
 
-/* Person Card */
-.person-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 25px;
-  padding: 25px;
-  margin-bottom: 30px;
-  background: white;
-  border-radius: var(--border-radius);
-  border-left: 4px solid var(--primary-color);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: all var(--transition-time);
-  position: relative;
-}
+        .org-content.active {
+            display: block;
+        }
 
-.person-card:hover {
-  transform: translateX(5px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-}
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-.person-card.level-1 {
-  border-left-color: var(--primary-color);
-  margin-left: 0;
-}
+        /* Hierarchy Container */
+        .hierarchy-container {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: 0 8px 24px var(--shadow-color);
+        }
 
-.person-card.level-2 {
-  border-left-color: var(--subprimary-color);
-  margin-left: 50px;
-  background: #f8f9fa;
-}
+        /* Person Card */
+        .person-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 25px;
+            padding: 25px;
+            margin-bottom: 30px;
+            background: white;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--primary-color);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: all var(--transition-time);
+            position: relative;
+        }
 
-.person-card.level-3 {
-  border-left-color: var(--quaternary-color);
-  margin-left: 100px;
-  background: #f1f3f5;
-}
+        .person-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        }
 
-/* Photo */
-.person-photo {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid var(--primary-color);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  flex-shrink: 0;
-}
+        .person-card.level-1 {
+            border-left-color: var(--primary-color);
+            margin-left: 0;
+        }
 
-/* Info */
-.person-info {
-  flex: 1;
-}
+        /* Colores de borde según el tab activo */
+        #duacyd .person-card.level-1 {
+            border-left-color: var(--primary-color);
+        }
 
-.person-position {
-  font-size: 0.85rem;
-  color: #666;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 8px;
-}
+        #suayed .person-card.level-1 {
+            border-left-color: var(--suayed-color);
+        }
 
-.person-name {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--primary-color);
-  margin-bottom: 15px;
-}
+        #cle .person-card.level-1 {
+            border-left-color: var(--cle-color);
+        }
 
-.person-contact {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+        #edco .person-card.level-1 {
+            border-left-color: var(--edco-color);
+        }
 
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #555;
-  font-size: 0.95rem;
-}
+        .person-card.level-2 {
+            border-left-color: var(--subprimary-color);
+            margin-left: 50px;
+            background: #f8f9fa;
+        }
 
-.contact-item i {
-  color: var(--primary-color);
-  width: 20px;
-  text-align: center;
-}
+        .person-card.level-3 {
+            border-left-color: var(--quaternary-color);
+            margin-left: 100px;
+            background: #f1f3f5;
+        }
 
-.contact-item a {
-  color: #555;
-  text-decoration: none;
-  transition: color 0.3s;
-}
+        /* Photo */
+        .person-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary-color);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            flex-shrink: 0;
+        }
 
-.contact-item a:hover {
-  color: var(--primary-color);
-}
+        /* Colores de borde de foto según el tab */
+        #duacyd .person-photo {
+            border-color: var(--primary-color);
+        }
 
-/* Hierarchical Lines */
-.hierarchy-line {
-  position: relative;
-}
+        #suayed .person-photo {
+            border-color: var(--suayed-color);
+        }
 
-.hierarchy-line::before {
-  content: '';
-  position: absolute;
-  left: -30px;
-  top: 50%;
-  width: 30px;
-  height: 2px;
-  background: var(--quaternary-color);
-}
+        #cle .person-photo {
+            border-color: var(--cle-color);
+        }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .organigrama-title {
-    font-size: 2rem;
-    margin-bottom: 40px;
-  }
+        #edco .person-photo {
+            border-color: var(--edco-color);
+        }
 
-  .org-tabs-nav {
-    flex-direction: column;
-  }
+        /* Info */
+        .person-info {
+            flex: 1;
+        }
 
-  .org-tab {
-    min-width: 100%;
-    padding: 15px;
-  }
+        .person-position {
+            font-size: 0.85rem;
+            color: #666;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
 
-  .hierarchy-container {
-    padding: 20px;
-  }
+        .person-name {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
 
-  .person-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-  }
+        /* Colores de nombre según el tab */
+        #duacyd .person-name {
+            color: var(--primary-color);
+        }
 
-  .person-card.level-2,
-  .person-card.level-3 {
-    margin-left: 0;
-  }
+        #suayed .person-name {
+            color: var(--suayed-color);
+        }
 
-  .person-photo {
-    width: 100px;
-    height: 100px;
-  }
+        #cle .person-name {
+            color: var(--cle-color);
+        }
 
-  .person-name {
-    font-size: 1.2rem;
-  }
+        #edco .person-name {
+            color: var(--edco-color);
+        }
 
-  .person-contact {
-    width: 100%;
-  }
+        .person-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
 
-  .contact-item {
-    justify-content: center;
-  }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #555;
+            font-size: 0.95rem;
+        }
 
-  .hierarchy-line::before {
-    display: none;
-  }
-}
+        .contact-item i {
+            color: var(--primary-color);
+            width: 20px;
+            text-align: center;
+        }
 
-@media (max-width: 576px) {
-  .organigrama-section {
-    padding: 40px 0;
-  }
+        /* Colores de iconos según el tab */
+        #duacyd .contact-item i {
+            color: var(--primary-color);
+        }
 
-  .person-photo {
-    width: 80px;
-    height: 80px;
-  }
-}
+        #suayed .contact-item i {
+            color: var(--suayed-color);
+        }
+
+        #cle .contact-item i {
+            color: var(--cle-color);
+        }
+
+        #edco .contact-item i {
+            color: var(--edco-color);
+        }
+
+        .contact-item a {
+            color: #555;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hover de enlaces según el tab */
+        #duacyd .contact-item a:hover {
+            color: var(--primary-color);
+        }
+
+        #suayed .contact-item a:hover {
+            color: var(--suayed-color);
+        }
+
+        #cle .contact-item a:hover {
+            color: var(--cle-color);
+        }
+
+        #edco .contact-item a:hover {
+            color: var(--edco-color);
+        }
+
+        /* Hierarchical Lines */
+        .hierarchy-line {
+            position: relative;
+        }
+
+        .hierarchy-line::before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 50%;
+            width: 30px;
+            height: 2px;
+            background: var(--quaternary-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .organigrama-title {
+                font-size: 2rem;
+                margin-bottom: 40px;
+            }
+
+            .org-tabs-nav {
+                flex-direction: column;
+            }
+
+            .org-tab {
+                min-width: 100%;
+                padding: 15px;
+            }
+
+            .hierarchy-container {
+                padding: 20px;
+            }
+
+            .person-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .person-card.level-2,
+            .person-card.level-3 {
+                margin-left: 0;
+            }
+
+            .person-photo {
+                width: 100px;
+                height: 100px;
+            }
+
+            .person-name {
+                font-size: 1.2rem;
+            }
+
+            .person-contact {
+                width: 100%;
+            }
+
+            .contact-item {
+                justify-content: center;
+            }
+
+            .hierarchy-line::before {
+                display: none;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .organigrama-section {
+                padding: 40px 0;
+            }
+
+            .person-photo {
+                width: 80px;
+                height: 80px;
+            }
+        }
