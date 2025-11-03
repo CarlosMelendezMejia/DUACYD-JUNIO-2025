@@ -1624,12 +1624,127 @@ main {
         height: 45px;
         font-size: 1.5rem;
     }
-    
+
     .qa-title {
         font-size: 0.95rem;
     }
-    
+
     .qa-desc {
         font-size: 0.85rem;
+    }
+}
+
+/* Enhanced styles for Rutas Seguras section */
+#rutas-seguras-section .card {
+    transition: all var(--transition-time) ease;
+    position: relative;
+    overflow: hidden;
+}
+
+#rutas-seguras-section .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -4px;
+    width: 4px;
+    height: 0;
+    transition: height var(--transition-time) ease;
+}
+
+#rutas-seguras-section .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 41, 107, 0.2) !important;
+}
+
+#rutas-seguras-section .card:hover::before {
+    height: 100%;
+}
+
+#rutas-seguras-section .list-unstyled li {
+    transition: all 0.3s ease;
+    padding-left: 0;
+}
+
+#rutas-seguras-section .list-unstyled li:hover {
+    padding-left: 10px;
+    color: var(--primary-color);
+}
+
+#rutas-seguras-section .list-unstyled i {
+    transition: transform 0.3s ease;
+}
+
+#rutas-seguras-section .list-unstyled li:hover i {
+    transform: scale(1.2);
+}
+
+/* Enhanced alert styles */
+.alert {
+    border: none;
+    border-radius: var(--border-radius);
+}
+
+.alert-info {
+    background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%);
+    border-left: 4px solid #0c5460;
+}
+
+.alert-warning {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+    border-left: 4px solid #856404;
+}
+
+/* Comunidad section background */
+#comunidad-acciones {
+    position: relative;
+    overflow: hidden;
+}
+
+#comunidad-acciones::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(0, 41, 107, 0.03) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+#comunidad-acciones::after {
+    content: '';
+    position: absolute;
+    bottom: -50%;
+    left: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(133, 190, 255, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* Responsive improvements */
+@media (max-width: 991.98px) {
+    #rutas-seguras-section .card {
+        margin-bottom: 1.5rem;
+    }
+
+    #rutas-seguras-section .list-unstyled li {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #comunidad-acciones h2 {
+        font-size: 1.75rem;
+    }
+
+    #rutas-seguras-section h3 {
+        font-size: 1.25rem;
+    }
+
+    #rutas-seguras-section h4 {
+        font-size: 1rem;
     }
 }
