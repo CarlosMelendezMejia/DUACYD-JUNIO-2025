@@ -1774,13 +1774,12 @@
                 ]
             };
 
-            // Icono personalizado para botones de pánico (rojo)
-            var iconoBoton = L.divIcon({
-                className: 'custom-div-icon',
-                html: '<div style="background-color: #e74c3c; width: 30px; height: 30px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 5px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center;"><i class="bi bi-bell-fill" style="color: white; font-size: 14px;"></i></div>',
-                iconSize: [30, 30],
-                iconAnchor: [15, 15],
-                popupAnchor: [0, -15]
+            // Icono personalizado para botones de pánico
+            var iconoBoton = L.icon({
+                iconUrl: 'resources/btn_emergencia.png',
+                iconSize: [30, 45],
+                iconAnchor: [15, 45],
+                popupAnchor: [0, -45]
             });
 
             // Renderizar los marcadores en el mapa
