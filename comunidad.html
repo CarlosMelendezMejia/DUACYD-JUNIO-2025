@@ -18,6 +18,10 @@
         rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="icon" href="resources/DUACyD_B-09.ico" type="image/x-icon">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
 </head>
 
 <body>
@@ -594,14 +598,7 @@
                                             <i class="bi bi-geo-alt-fill me-2"></i> Ubicación de los botones de pánico
                                         </h4>
                                         <p class="text-muted mb-3">Consulta el mapa interactivo para identificar la ubicación exacta de todos los botones de pánico en el campus de la FES Aragón.</p>
-                                        <div class="ratio ratio-16x9 border rounded-3 d-flex align-items-center justify-content-center" style="background-color: #f8f9fa;">
-                                            <div class="text-center">
-                                                <i class="bi bi-pin-map-fill fs-1 mb-3" style="color: var(--accent-color);"></i>
-                                                <p class="text-muted mb-0">
-                                                    <i class="bi bi-geo-alt me-2"></i>Aquí irá el mapa interactivo con la ubicación de los botones de pánico
-                                                </p>
-                                            </div>
-                                        </div>
+                                        <div id="map-botones-panico" class="border rounded-3" style="height: 500px; width: 100%;"></div>
                                     </div>
                                 </div>
 
@@ -1566,6 +1563,251 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+    
+    <!-- Inicialización del mapa de botones de pánico -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicialización del mapa centrado en FES Aragón
+            var mapBotones = L.map('map-botones-panico').setView([19.4745, -99.0455], 16);
+
+            // Capa de tiles de OpenStreetMap
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(mapBotones);
+
+            // Datos GeoJSON solo con botones de emergencia
+            var botonesData = {
+                "type": "FeatureCollection",
+                "features": [
+                    {
+                        "type": "Feature",
+                        "properties": {
+                            "nombre": "Botón de Emergencia 1",
+                            "ubicacion": "Zona de acceso principal"
+                        },
+                        "geometry": {
+                            "coordinates": [-99.04657347528813, 19.474736089199098],
+                            "type": "Point"
+                        }
+                    },
+                    {
+                        "type": "Feature",
+                        "properties": {
+                            "nombre": "Botón de Emergencia 2",
+                            "ubicacion": "Edificio central"
+                        },
+                        "geometry": {
+                            "coordinates": [-99.04499681508642, 19.475141381426326],
+                            "type": "Point"
+                        }
+                    },
+                    {
+                        "type": "Feature",
+                        "properties": {
+                            "nombre": "Botón de Emergencia 3",
+                            "ubicacion": "Zona académica"
+                        },
+                        "geometry": {
+                            "coordinates": [-99.04515948791318, 19.474391089517283],
+                            "type": "Point"
+                        }
+                    },
+                    {
+                        "type": "Feature",
+                        "properties": {
+                            "nombre": "Botón de Emergencia 4",
+                            "ubicacion": "Área de servicios"
+                        },
+                        "geometry": {
+                            "coordinates": [-99.0436121918466, 19.474536552228997],
+                            "type": "Point"
+                        }
+                    },
+                    {
+                        "type": "Feature",
+                        "properties": {
+                            "nombre": "Botón de Emergencia 5",
+                            "ubicacion": "Zona deportiva"
+                        },
+                        "geometry": {
+                            "coordinates": [-99.0436425313238, 19.47464734645962],
+                            "type": "Point"
+                        }
+                    },
+                    {
+                        "type": "Feature",
+                        "properties": {
+                            "nombre": "Botón de Emergencia 6",
+                            "ubicacion": "Biblioteca"
+                        },
+                        "geometry": {
+                            "coordinates": [-99.04373316571345, 19.474555017939167],
+                            "type": "Point"
+                        }
+                    },
+                    {
+                        "type": "Feature",
+                        "properties": {
+                            "nombre": "Botón de Emergencia 7",
+                            "ubicacion": "Cafetería principal"
+                        },
+                        "geometry": {
+                            "coordinates": [-99.0437088936478, 19.4742918824048],
+                            "type": "Point"
+                        }
+                    },
+                    {
+                        "type": "Feature",
+                        "properties": {
+                            "nombre": "Botón de Emergencia 8",
+                            "ubicacion": "Auditorio"
+                        },
+                        "geometry": {
+                            "coordinates": [-99.04515499522876, 19.475382284563025],
+                            "type": "Point"
+                        }
+                    },
+                    {
+                        "type": "Feature",
+                        "properties": {
+                            "nombre": "Botón de Emergencia 9",
+                            "ubicacion": "Estacionamiento norte"
+                        },
+                        "geometry": {
+                            "coordinates": [-99.04613656961627, 19.476340378631377],
+                            "type": "Point"
+                        }
+                    },
+                    {
+                        "type": "Feature",
+                        "properties": {
+                            "nombre": "Botón de Emergencia 10",
+                            "ubicacion": "Laboratorios"
+                        },
+                        "geometry": {
+                            "coordinates": [-99.04465889211676, 19.474469500643323],
+                            "type": "Point"
+                        }
+                    },
+                    {
+                        "type": "Feature",
+                        "properties": {
+                            "nombre": "Botón de Emergencia 11",
+                            "ubicacion": "Centro de cómputo"
+                        },
+                        "geometry": {
+                            "coordinates": [-99.04358699001008, 19.47412869217908],
+                            "type": "Point"
+                        }
+                    },
+                    {
+                        "type": "Feature",
+                        "properties": {
+                            "nombre": "Botón de Emergencia 12",
+                            "ubicacion": "Edificio de posgrados"
+                        },
+                        "geometry": {
+                            "coordinates": [-99.04577943270327, 19.474650404265972],
+                            "type": "Point"
+                        }
+                    },
+                    {
+                        "type": "Feature",
+                        "properties": {
+                            "nombre": "Botón de Emergencia 13",
+                            "ubicacion": "Área administrativa"
+                        },
+                        "geometry": {
+                            "coordinates": [-99.044511074827, 19.474395825082198],
+                            "type": "Point"
+                        }
+                    },
+                    {
+                        "type": "Feature",
+                        "properties": {
+                            "nombre": "Botón de Emergencia 14",
+                            "ubicacion": "Explanada principal"
+                        },
+                        "geometry": {
+                            "coordinates": [-99.0440747062465, 19.47418392236598],
+                            "type": "Point"
+                        }
+                    },
+                    {
+                        "type": "Feature",
+                        "properties": {
+                            "nombre": "Botón de Emergencia 15",
+                            "ubicacion": "Zona de talleres"
+                        },
+                        "geometry": {
+                            "coordinates": [-99.0441921809868, 19.473477183448253],
+                            "type": "Point"
+                        }
+                    },
+                    {
+                        "type": "Feature",
+                        "properties": {
+                            "nombre": "Botón de Emergencia 16",
+                            "ubicacion": "Área cultural"
+                        },
+                        "geometry": {
+                            "coordinates": [-99.0428099828538, 19.475317644490048],
+                            "type": "Point"
+                        }
+                    },
+                    {
+                        "type": "Feature",
+                        "properties": {
+                            "nombre": "Botón de Emergencia 17",
+                            "ubicacion": "Entrada secundaria"
+                        },
+                        "geometry": {
+                            "coordinates": [-99.04225912667326, 19.474839037202827],
+                            "type": "Point"
+                        }
+                    }
+                ]
+            };
+
+            // Icono personalizado para botones de pánico (rojo)
+            var iconoBoton = L.divIcon({
+                className: 'custom-div-icon',
+                html: '<div style="background-color: #e74c3c; width: 30px; height: 30px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 5px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center;"><i class="bi bi-bell-fill" style="color: white; font-size: 14px;"></i></div>',
+                iconSize: [30, 30],
+                iconAnchor: [15, 15],
+                popupAnchor: [0, -15]
+            });
+
+            // Renderizar los marcadores en el mapa
+            L.geoJSON(botonesData, {
+                pointToLayer: function (feature, latlng) {
+                    var marcador = L.marker(latlng, { icon: iconoBoton });
+                    
+                    // Agregar popup con la información
+                    var popupContent = '<div style="text-align: center;">' +
+                                      '<strong style="color: #e74c3c;">' + feature.properties.nombre + '</strong><br>' + 
+                                      '<small>' + feature.properties.ubicacion + '</small>' +
+                                      '</div>';
+                    
+                    marcador.bindPopup(popupContent);
+                    
+                    // Agregar tooltip al hacer hover
+                    marcador.bindTooltip(feature.properties.nombre, {
+                        permanent: false,
+                        direction: 'top',
+                        offset: [0, -15]
+                    });
+                    
+                    return marcador;
+                }
+            }).addTo(mapBotones);
+        });
+    </script>
 </body>
 
 </html>
