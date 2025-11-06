@@ -1748,3 +1748,269 @@ main {
         font-size: 1rem;
     }
 }
+
+/* Protocol Flow Styles */
+.protocol-flow {
+    position: relative;
+    padding: 20px 0;
+}
+
+.protocol-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    margin-bottom: 30px;
+    position: relative;
+    opacity: 0;
+    animation: slideInProtocol 0.6s ease-out forwards;
+}
+
+.protocol-step:nth-child(1) { animation-delay: 0.1s; }
+.protocol-step:nth-child(3) { animation-delay: 0.2s; }
+.protocol-step:nth-child(5) { animation-delay: 0.3s; }
+.protocol-step:nth-child(7) { animation-delay: 0.4s; }
+.protocol-step:nth-child(9) { animation-delay: 0.5s; }
+.protocol-step:nth-child(11) { animation-delay: 0.6s; }
+.protocol-step:nth-child(13) { animation-delay: 0.7s; }
+.protocol-step:nth-child(15) { animation-delay: 0.8s; }
+.protocol-step:nth-child(17) { animation-delay: 0.9s; }
+
+@keyframes slideInProtocol {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+}
+
+/* Shadow específico para protocolo de incendio (naranja) */
+#comunidad-protocolos .card:first-child .step-number[style*="#FF6B35"] {
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+}
+
+/* Shadow específico para protocolo de objeto extraño (morado) */
+#comunidad-protocolos .card:nth-child(2) .step-number[style*="#9B59B6"] {
+    box-shadow: 0 4px 12px rgba(155, 89, 182, 0.3);
+}
+
+/* Shadow específico para protocolo de artefacto explosivo (rojo oscuro) */
+#comunidad-protocolos .card:nth-child(3) .step-number[style*="#C0392B"] {
+    box-shadow: 0 4px 12px rgba(192, 57, 43, 0.3);
+}
+
+/* Shadow para paso de falsa alarma (azul) */
+#comunidad-protocolos .card:nth-child(3) .step-number[style*="#3498DB"] {
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+/* Shadow para paso de explosión (naranja oscuro) */
+#comunidad-protocolos .card:nth-child(3) .step-number[style*="#E67E22"] {
+    box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
+}
+
+/* Shadow para paso final verde en protocolo de incendio */
+#comunidad-protocolos .card:first-child .step-number[style*="#28a745"] {
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+/* Shadow para paso final verde en protocolo de objeto extraño */
+#comunidad-protocolos .card:nth-child(2) .step-number[style*="#28a745"] {
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+.step-content {
+    flex: 1;
+    position: relative;
+}
+
+.step-content .card {
+    transition: all var(--transition-time) ease;
+    border: none;
+}
+
+.step-content .card:hover {
+    transform: translateX(10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Protocol Connector Line */
+.protocol-connector {
+    position: relative;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    margin-top: -10px;
+    height: 40px;
+    width: 3px;
+    background: linear-gradient(to bottom, #FF6B35 0%, #FFA07A 100%);
+    border-radius: 3px;
+    opacity: 0;
+    animation: fadeInLine 0.5s ease-out forwards;
+}
+
+.protocol-connector:nth-child(2) { animation-delay: 0.15s; }
+.protocol-connector:nth-child(4) { animation-delay: 0.25s; }
+.protocol-connector:nth-child(6) { animation-delay: 0.35s; }
+.protocol-connector:nth-child(8) { animation-delay: 0.45s; }
+.protocol-connector:nth-child(10) { animation-delay: 0.55s; }
+.protocol-connector:nth-child(12) { animation-delay: 0.65s; }
+.protocol-connector:nth-child(14) { animation-delay: 0.75s; }
+.protocol-connector:nth-child(16) { animation-delay: 0.85s; }
+
+@keyframes fadeInLine {
+    from {
+        opacity: 0;
+        height: 0;
+    }
+    to {
+        opacity: 1;
+        height: 40px;
+    }
+}
+
+/* Protocol specific alert styles */
+#comunidad-protocolos .alert-danger {
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+    border-left: 4px solid #c82333;
+}
+
+#comunidad-protocolos .alert-success {
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    border-left: 4px solid #28a745;
+}
+
+#comunidad-protocolos .alert-info {
+    background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%);
+    border-left: 4px solid #0c5460;
+}
+
+#comunidad-protocolos .alert-warning {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+    border-left: 4px solid #856404;
+}
+
+/* Badge styles for protocol */
+#comunidad-protocolos .badge {
+    padding: 0.5em 0.8em;
+    font-weight: 600;
+}
+
+/* Protocol card hover effects */
+#comunidad-protocolos .card-body ul li {
+    transition: all 0.3s ease;
+    padding-left: 0;
+}
+
+#comunidad-protocolos .card-body ul li:hover {
+    padding-left: 10px;
+}
+
+#comunidad-protocolos .card-body i.bi-check-circle-fill,
+#comunidad-protocolos .card-body i.bi-arrow-right-circle-fill {
+    transition: transform 0.3s ease;
+}
+
+#comunidad-protocolos .card-body li:hover i.bi-check-circle-fill,
+#comunidad-protocolos .card-body li:hover i.bi-arrow-right-circle-fill {
+    transform: scale(1.2);
+}
+
+/* Responsive protocol styles */
+@media (max-width: 768px) {
+    .protocol-step {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .step-number {
+        width: 45px;
+        height: 45px;
+        font-size: 1.25rem;
+    }
+
+    .protocol-connector {
+        margin-left: 22px;
+        height: 30px;
+    }
+
+    @keyframes fadeInLine {
+        from {
+            opacity: 0;
+            height: 0;
+        }
+        to {
+            opacity: 1;
+            height: 30px;
+        }
+    }
+
+    .step-content .card:hover {
+        transform: translateY(-5px);
+    }
+
+    #comunidad-protocolos h3 {
+        font-size: 1.5rem;
+    }
+
+    #comunidad-protocolos h5 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+
+    .protocol-connector {
+        margin-left: 20px;
+        height: 25px;
+    }
+
+    @keyframes fadeInLine {
+        from {
+            opacity: 0;
+            height: 0;
+        }
+        to {
+            opacity: 1;
+            height: 25px;
+        }
+    }
+
+    #comunidad-protocolos .card-body {
+        padding: 1.25rem !important;
+    }
+
+    #comunidad-protocolos h3 {
+        font-size: 1.25rem;
+    }
+
+    #comunidad-protocolos h5 {
+        font-size: 1rem;
+    }
+
+    #comunidad-protocolos .alert {
+        font-size: 0.9rem;
+    }
+}
