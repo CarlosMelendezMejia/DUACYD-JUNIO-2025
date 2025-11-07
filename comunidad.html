@@ -533,14 +533,7 @@
                                             <i class="bi bi-map-fill me-2"></i> Mapa de rutas y puntos seguros
                                         </h4>
                                         <p class="text-muted mb-3">Consulta el mapa interactivo para planificar tu trayecto identificando las rutas más seguras y los puntos de atención cercanos al campus.</p>
-                                        <div class="ratio ratio-16x9 border rounded-3 d-flex align-items-center justify-content-center" style="background-color: #f8f9fa;">
-                                            <div class="text-center">
-                                                <i class="bi bi-map fs-1 mb-3 custom-text-primary"></i>
-                                                <p class="text-muted mb-0">
-                                                    <i class="bi bi-geo-alt me-2"></i>Aquí irá el mapa interactivo con rutas seguras y puntos de atención
-                                                </p>
-                                            </div>
-                                        </div>
+                                        <div id="map-rutas-seguras" class="border rounded-3" style="height: 500px; width: 100%;"></div>
                                     </div>
                                 </div>
                             </div>
@@ -1569,11 +1562,150 @@
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
         crossorigin=""></script>
     
+    <!-- Inicialización del mapa de rutas seguras -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicialización del mapa centrado en FES Aragón
+            var mapRutas = L.map('map-rutas-seguras').setView([19.4745, -99.0455], 16);
+
+            // Capa de tiles de OpenStreetMap
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(mapRutas);
+
+            // === RUTA SEGURA 1: "Salida Bosques a Metro Nezahualcóyotl" ===
+            const rutaSegura1 = [
+                [19.476303, -99.046742],  // Inicio
+                [19.477340, -99.051576],  // Punto 1.1
+                [19.472058, -99.053936],  // Punto 1.2
+                [19.472518, -99.054338]   // Final
+            ];
+
+            // === RUTA SEGURA 2: "Salida Av. Universidad a Metro Impulsora" ===
+            const rutaSegura2 = [
+                [19.477138, -99.044323],  // Inicio
+                [19.477790, -99.047182],  // Punto 2.1
+                [19.484968, -99.044047],  // Punto 2.2
+                [19.485646, -99.047823],  // Punto 2.3
+                [19.485545, -99.047912]   // Final
+            ];
+
+            // Funciones utilitarias para calcular distancia (Haversine)
+            function haversineKm(a, b) {
+                const toRad = deg => deg * Math.PI / 180;
+                const R = 6371; // km
+                const dLat = toRad(b[0] - a[0]);
+                const dLng = toRad(b[1] - a[1]);
+                const lat1 = toRad(a[0]);
+                const lat2 = toRad(b[0]);
+
+                const h = Math.sin(dLat/2)**2 + Math.cos(lat1)*Math.cos(lat2)*Math.sin(dLng/2)**2;
+                return 2 * R * Math.asin(Math.sqrt(h));
+            }
+
+            function totalKm(coords) {
+                let km = 0;
+                for (let i = 1; i < coords.length; i++) {
+                    km += haversineKm(coords[i-1], coords[i]);
+                }
+                return km;
+            }
+
+            // Dibuja la polilínea y marcadores para Ruta 1
+            const capaRuta1 = L.polyline(rutaSegura1, {
+                color: '#00296b',   // azul UNAM
+                weight: 6,
+                opacity: 0.8,
+                lineJoin: 'round'
+            }).bindPopup('<strong style="color: #00296b;">Ruta Segura 1</strong><br>Salida Bosques a Metro Nezahualcóyotl<br>Distancia: ' + totalKm(rutaSegura1).toFixed(2) + ' km');
+
+            const mkInicio1 = L.circleMarker(rutaSegura1[0], {
+                radius: 8,
+                color: '#00296b',
+                fillColor: '#00296b',
+                fillOpacity: 1,
+                weight: 3
+            }).bindPopup('<strong>Inicio</strong><br>Salida Bosques');
+
+            const mkFin1 = L.circleMarker(rutaSegura1[rutaSegura1.length - 1], {
+                radius: 8,
+                color: '#00296b',
+                fillColor: '#00296b',
+                fillOpacity: 1,
+                weight: 3
+            }).bindPopup('<strong>Fin</strong><br>Metro Nezahualcóyotl');
+
+            // Agrupa todo en una FeatureGroup para Ruta 1
+            const grupoRuta1 = L.featureGroup([capaRuta1, mkInicio1, mkFin1]).addTo(mapRutas);
+
+            // Dibuja la polilínea y marcadores para Ruta 2
+            const capaRuta2 = L.polyline(rutaSegura2, {
+                color: '#2E7D32',   // verde
+                weight: 6,
+                opacity: 0.8,
+                lineJoin: 'round'
+            }).bindPopup('<strong style="color: #2E7D32;">Ruta Segura 2</strong><br>Salida Av. Universidad a Metro Impulsora<br>Distancia: ' + totalKm(rutaSegura2).toFixed(2) + ' km');
+
+            const mkInicio2 = L.circleMarker(rutaSegura2[0], {
+                radius: 8,
+                color: '#2E7D32',
+                fillColor: '#2E7D32',
+                fillOpacity: 1,
+                weight: 3
+            }).bindPopup('<strong>Inicio</strong><br>Salida Av. Universidad');
+
+            const mkFin2 = L.circleMarker(rutaSegura2[rutaSegura2.length - 1], {
+                radius: 8,
+                color: '#2E7D32',
+                fillColor: '#2E7D32',
+                fillOpacity: 1,
+                weight: 3
+            }).bindPopup('<strong>Fin</strong><br>Metro Impulsora');
+
+            // Agrupa todo en una FeatureGroup para Ruta 2
+            const grupoRuta2 = L.featureGroup([capaRuta2, mkInicio2, mkFin2]).addTo(mapRutas);
+
+            // Ajusta el mapa para mostrar todas las rutas
+            const todasLasRutas = L.featureGroup([grupoRuta1, grupoRuta2]);
+            mapRutas.fitBounds(todasLasRutas.getBounds(), { padding: [30, 30] });
+
+            // Control de capas para activar/desactivar rutas
+            const overlays = {
+                'Ruta 1: Bosques → Metro Neza': grupoRuta1,
+                'Ruta 2: Av. Universidad → Metro Impulsora': grupoRuta2
+            };
+            L.control.layers(null, overlays, { collapsed: false }).addTo(mapRutas);
+
+            // Caja de información con distancias
+            const info = L.control({ position: 'topright' });
+            info.onAdd = function() {
+                const div = L.DomUtil.create('div', 'info-box');
+                div.style.background = '#fff';
+                div.style.padding = '12px 16px';
+                div.style.borderRadius = '8px';
+                div.style.boxShadow = '0 2px 8px rgba(0,0,0,0.2)';
+                div.style.fontFamily = 'Poppins, system-ui, sans-serif';
+                div.style.fontSize = '14px';
+                div.style.lineHeight = '1.6';
+                div.innerHTML = '<strong style="color: #00296b; font-size: 16px;">📍 Rutas Seguras</strong><br>' +
+                               '<span style="color: #00296b;">● Ruta 1:</span> ' + totalKm(rutaSegura1).toFixed(2) + ' km<br>' +
+                               '<small style="color: #666;">Bosques → Metro Neza</small><br>' +
+                               '<span style="color: #2E7D32;">● Ruta 2:</span> ' + totalKm(rutaSegura2).toFixed(2) + ' km<br>' +
+                               '<small style="color: #666;">Av. Universidad → Metro Impulsora</small>';
+                return div;
+            };
+            info.addTo(mapRutas);
+
+            // Escala del mapa
+            L.control.scale({ imperial: false, metric: true }).addTo(mapRutas);
+        });
+    </script>
+    
     <!-- Inicialización del mapa de botones de pánico -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Inicialización del mapa centrado en FES Aragón
-            var mapBotones = L.map('map-botones-panico').setView([19.4745, -99.0455], 16);
+            var mapBotones = L.map('map-botones-panico').setView([19.4745, -99.0455], 17);
 
             // Capa de tiles de OpenStreetMap
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
