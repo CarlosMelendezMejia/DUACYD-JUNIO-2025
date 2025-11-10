@@ -18,6 +18,10 @@
   --shadow-color: rgba(0, 0, 0, 0.1);
   --transition-time: 0.6s;
   --border-radius: 12px;
+  
+  /* Variables para filtro de banners */
+  --banner-overlay-color: rgba(0, 41, 107, 0.5);
+  --banner-overlay-opacity: 0.5;
 }
 
 
@@ -797,6 +801,26 @@ main {
   /* Fallback */
 }
 
+/* Máscara de color para banners - Aplicar con ::before */
+.banner-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--banner-overlay-color);
+  opacity: var(--banner-overlay-opacity);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Asegurar que el contenido esté por encima del overlay */
+.banner-overlay > * {
+  position: relative;
+  z-index: 2;
+}
+
 .carousel-inner {
   overflow: hidden;
 }
@@ -810,7 +834,6 @@ main {
 @media (max-width: 991.98px) {
   .hero-section {
     padding-top: 4rem;
-    /* o el valor que necesites */
   }
 }
 
