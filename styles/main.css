@@ -1606,9 +1606,54 @@ main {
 }
 
 .card:hover .qa-icon {
+    transform: scale(1.1);
+}
+
+/* Estilos generales para SVG personalizado en qa-icon */
+.qa-icon svg {
+    width: 28px;
+    height: 28px;
+    transition: all var(--transition-time);
+}
+
+/* Transición suave para todos los elementos SVG */
+.qa-icon svg path,
+.qa-icon svg circle,
+.qa-icon svg rect,
+.qa-icon svg polygon,
+.qa-icon svg ellipse,
+.qa-icon svg line,
+.qa-icon svg polyline {
+    transition: fill var(--transition-time), stroke var(--transition-time), opacity var(--transition-time);
+}
+
+/* Cambiar todos los elementos SVG a blanco en hover cuando tiene data-color */
+.card:hover .qa-icon[data-color] svg path,
+.card:hover .qa-icon[data-color] svg circle,
+.card:hover .qa-icon[data-color] svg rect,
+.card:hover .qa-icon[data-color] svg polygon,
+.card:hover .qa-icon[data-color] svg ellipse {
+    fill: white !important;
+}
+
+.card:hover .qa-icon[data-color] svg path[stroke],
+.card:hover .qa-icon[data-color] svg circle[stroke],
+.card:hover .qa-icon[data-color] svg rect[stroke],
+.card:hover .qa-icon[data-color] svg line,
+.card:hover .qa-icon[data-color] svg polyline {
+    stroke: white !important;
+}
+
+/* Preservar elementos que no deben cambiar (usar clase .preserve-color) */
+.card:hover .qa-icon[data-color] svg .preserve-color {
+    fill: inherit !important;
+    stroke: inherit !important;
+}
+
+/* Mantener compatibilidad con íconos de Bootstrap Icons */
+.card:hover .qa-icon:not([data-color]) {
     background: var(--primary-color);
     color: white !important;
-    transform: scale(1.1);
 }
 
 .qa-title {
