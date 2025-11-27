@@ -1370,15 +1370,36 @@ main {
         }
 
         .person-card.level-2 {
-            border-left-color: var(--subprimary-color);
-            margin-left: 50px;
-            background: #f8f9fa;
+          border-left-color: var(--subprimary-color);
+          margin-left: 50px;
+          background: #f8f9fa;
         }
 
         .person-card.level-3 {
-            border-left-color: var(--quaternary-color);
-            margin-left: 100px;
-            background: #f1f3f5;
+          border-left-color: var(--quaternary-color);
+          margin-left: 100px;
+          background: #f1f3f5;
+        }
+
+        /* Ajuste de colores por área para niveles no principales */
+        #duacyd .person-card.level-2,
+        #duacyd .person-card.level-3 {
+          border-left-color: var(--primary-color);
+        }
+
+        #suayed .person-card.level-2,
+        #suayed .person-card.level-3 {
+          border-left-color: var(--suayed-color);
+        }
+
+        #cle .person-card.level-2,
+        #cle .person-card.level-3 {
+          border-left-color: var(--cle-color);
+        }
+
+        #edco .person-card.level-2,
+        #edco .person-card.level-3 {
+          border-left-color: var(--edco-color);
         }
 
         /* Photo */
